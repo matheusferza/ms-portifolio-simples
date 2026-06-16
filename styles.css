@@ -691,11 +691,14 @@ textarea {
   background: var(--field);
 }
 
-.project-card div {
+.project-content {
+  display: flex;
+  min-height: 340px;
+  flex-direction: column;
   padding: 20px;
 }
 
-.project-card span {
+.project-type {
   display: block;
   margin-bottom: 8px;
   color: var(--green);
@@ -708,6 +711,49 @@ textarea {
 .service-grid p {
   margin: 10px 0 0;
   color: var(--muted);
+}
+
+.project-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 20px;
+  padding: 0;
+  list-style: none;
+}
+
+.project-stack li {
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--ink);
+  background: var(--field);
+  font-size: 0.78rem;
+  font-weight: 850;
+  line-height: 1;
+}
+
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  width: fit-content;
+  margin-top: auto;
+  color: var(--cyan-dark);
+  font-size: 0.9rem;
+  font-weight: 950;
+  text-decoration: none;
+}
+
+.project-link svg {
+  width: 16px;
+  height: 16px;
+  transition: transform 0.2s ease;
+}
+
+.project-link:hover svg,
+.project-link:focus-visible svg {
+  transform: translate(2px, -2px);
 }
 
 .service-grid {
