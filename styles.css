@@ -308,6 +308,11 @@ textarea {
   border-color: var(--line);
 }
 
+.btn.secondary2 {
+  color: var(--ink);
+  background: var(--card);
+  border-color: var(--line);
+}
 .quick-links {
   margin-top: 26px;
 }
@@ -449,15 +454,14 @@ textarea {
 
 .about-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1fr) minmax(300px, 0.74fr);
+  grid-template-columns: minmax(0, 1fr) minmax(280px, 0.62fr);
   gap: 28px;
-  align-items: stretch;
+  align-items: start;
 }
 
 .about-copy {
   display: grid;
-  align-content: center;
-  min-height: 520px;
+  align-content: start;
   padding: 34px;
   border-left: 5px solid var(--cyan);
   background: var(--card);
@@ -476,19 +480,25 @@ textarea {
 
 .profile-card {
   display: grid;
-  grid-template-rows: 1fr auto;
+  grid-template-rows: auto auto;
+  align-self: start;
+  justify-self: end;
   overflow: hidden;
-  min-height: 520px;
+  width: min(100%, 430px);
+  max-width: 490px;
+  min-height: 0;
   border-radius: 8px;
   background: var(--profile-caption-bg);
   box-shadow: var(--shadow);
 }
 
 .profile-card img {
+  display: block;
   width: 100%;
-  height: 100%;
+  height: clamp(360px, 36vw, 440px);
+  min-height: 0;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center 18%;
 }
 
 .profile-card div {
